@@ -1,0 +1,93 @@
+@import (less) "../less/bootstrap/bootstrap.less";
+@import (less) "../less/fontawesome/font-awesome.less";
+
+@color-dark-brown:#1E1619;
+@color-ligth-brown:#46382D;
+@color-orange:#ED6F32;
+@color-yellow:#F9B750;
+
+@import (less) "navbar-zoohackaton.less";
+@import (less) "social-buttons.less";
+
+html{
+		height: 100%;
+}
+body{
+	background-color: fade(@color-yellow, 80%);
+	font-family: 'Open Sans', sans-serif;
+	color: @color-dark-brown;
+	height: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+p{
+	font-size: 110%;
+}
+//header
+header{
+	background-color: @color-dark-brown;
+	background-image: url("../img/header.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 50px 0;
+	height: 100%;
+	.social-bar{
+		margin-top: 400px;
+	}
+}
+//padding pro horni navigaci
+section{
+	padding-top: 35px;
+}
+//zoohackaton
+#zoohackaton{
+	.row{
+		text-align: center;
+		.well{
+			background-color: fade(@color-orange, 30%);
+			border: none;
+		&:hover{
+			background-color: fade(@color-orange, 60%);
+		}
+		}
+	}
+	.glyphicon, .fa{
+		.fa-4x;
+		.center-block;
+	}
+}
+//registrace
+#registrace{
+	#strip{
+		margin-top: 15px;
+		background: darken(red, 20%);
+		background-color: @color-ligth-brown;
+		padding: 10px;
+		box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.75);
+		p{
+			line-height: 45px;
+			font-size: 200%;
+			color: @color-yellow;
+			text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+			margin: 0;
+		}
+	}
+}
+//paticka
+footer{
+	.navbar-zoohackaton;
+	.text-center;
+	margin-top: 200px;
+	height: 50px;
+	color:@color-yellow;
+	p{
+		margin: 0px;
+		line-height: 50px;
+	}
+	span{
+		color: fade(darken(red, 25%), 75%);
+	}
+}
